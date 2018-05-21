@@ -1,4 +1,4 @@
-# 2、ClientShell使用手册
+# 2、ClientShell配置手册
 
 **2.1、ClientShell的全局配置**
 
@@ -35,8 +35,4 @@ JPushAppKey是极光推送的appkey。
 NaviBar的样式![](/assets/屏幕快照 2018-05-21 15.43.12.png)可以设置NaviBar的字体的颜色与字体及设置NaviBar的导航背景色。
 
 通过WebViewProgressBarTintColor可以设置可以修改浏览器加载进度条的颜色。
-
-
-
-**2.2、ClientShell的使用方法**
 
