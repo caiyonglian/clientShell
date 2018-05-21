@@ -1,3 +1,4 @@
-# My Awesome Book
+# 1、ClientShell框架简述
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+集成了浏览器引擎与ReactNative环境的框架，可以通过配置化来设置框架的场景，是浏览器项目，还是ReactNative项目，通过配置导航条的背景色与导航字体样式等来简单的快速构建你的项目。降低开发成本和提高开发效率。
+
