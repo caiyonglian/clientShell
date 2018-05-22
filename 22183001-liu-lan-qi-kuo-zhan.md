@@ -1,6 +1,6 @@
 # **2.2.1.8、浏览器扩展**
 
-1、拦截器扩展
+**1、拦截器扩展**
 
 继承BNCWebViewURLInterceptor，实现performObject的方法
 
@@ -8,13 +8,13 @@
 
 -\(void\)performObject:\(NSString\*\)object command:\(NSString\*\)command withParam:\(id\)jsonObject{
 
- \[super performObject:object command:command withParam:jsonObject\];
+\[super performObject:object command:command withParam:jsonObject\];
 
- //code here
+//code here
 
 }
 
-2、视图控制器 BNCWebViewController
+**2、视图控制器 BNCWebViewController**
 
 //浏览器视图
 
@@ -92,21 +92,21 @@
 
 //此方法会在每次加载URL时对导航条状态进行还原（只还原导航条渐变样式及右侧items，并不影响左侧的items和导航条其他属性），可复写
 
-- \(void\)restoreBarStyleDefault;
+* \(void\)restoreBarStyleDefault;
 
 //当导航条由原生控制时，可通过以下两方法进行设置：
 
 //对导航条右侧按钮和导航条背景样式进行设置 attributeDic的范例在文件底部注释中
 
-- \(void\)setNavigationBarWithDictionary:\(NSDictionary \*\)attributeDic;
+* \(void\)setNavigationBarWithDictionary:\(NSDictionary \*\)attributeDic;
 
 //只对导航条背景样式进行设置  attributeDic的范例为上述attributeDic中navigationBarStyle对应的数据
 
-- \(void\)setNavigationBarBackgroundStyleWithDictionary:\(NSDictionary \*\)attributeDic;
+* \(void\)setNavigationBarBackgroundStyleWithDictionary:\(NSDictionary \*\)attributeDic;
 
 //设置导航标题
 
-- \(void\)setNavigationBarTitle:\(NSDictionary \*\)titleObj;
+* \(void\)setNavigationBarTitle:\(NSDictionary \*\)titleObj;
 
 /\*\*
 
@@ -122,51 +122,45 @@ js回调方法
 
 -\(void\)callObject:\(NSString\*\)object withHandler:\(NSString\*\)handler param:\(id\)param;
 
-
-
 //网页执行JS的入口
 
-- \(NSString \*\)stringByEvaluatingJavaScriptFromString:\(NSString \*\)script;
-
-
+* \(NSString \*\)stringByEvaluatingJavaScriptFromString:\(NSString \*\)script;
 
 /\*获取实时下载信息，此方法在下载进度发生变化时会调用，可复写
 
- @param url  当前正在下载的资源地址
+@param url  当前正在下载的资源地址
 
- @param totalBytesWritten  已经写入沙盒的大小
+@param totalBytesWritten  已经写入沙盒的大小
 
- @param totalBytesExpectedToWrite 文件总大小
+@param totalBytesExpectedToWrite 文件总大小
 
 \*/
 
-- \(void\)downloadUrl:\(NSURL \*\)url totalBytesWritten:\(int64\_t\)totalBytesWritten totalBytesExpectedToWrite:\(int64\_t\)totalBytesExpectedToWrite;
+* \(void\)downloadUrl:\(NSURL \*\)url totalBytesWritten:\(int64\_t\)totalBytesWritten totalBytesExpectedToWrite:\(int64\_t\)totalBytesExpectedToWrite;
 
 //查看网络附件
 
-- \(void\)viewFileWithFileUrl:\(NSDictionary \*\)fileUrlObj;
+* \(void\)viewFileWithFileUrl:\(NSDictionary \*\)fileUrlObj;
 
 //查看本地附件
 
-- \(void\)viewFileWithFilePath:\(NSString \*\)filePath;
+* \(void\)viewFileWithFilePath:\(NSString \*\)filePath;
 
 //以下为监听webview加载URL过程中触发的方法,子类可复写
 
 //是否允许加载url
 
-- \(BOOL\)webViewShouldStartLoadUrl:\(NSURL \*\)url navigationType:\(UIWebViewNavigationType\)navigationType;
+* \(BOOL\)webViewShouldStartLoadUrl:\(NSURL \*\)url navigationType:\(UIWebViewNavigationType\)navigationType;
 
 //加载完成
 
-- \(void\)webViewDidFinishLoadUrl:\(NSURL \*\)url;
+* \(void\)webViewDidFinishLoadUrl:\(NSURL \*\)url;
 
 //加载失败
 
-- \(void\)webViewDidFailLoadUrl:\(NSURL \*\)url WithError:\(NSError \*\)error;
+* \(void\)webViewDidFailLoadUrl:\(NSURL \*\)url WithError:\(NSError \*\)error;
 
 //设置导航左侧显示关闭和返回按钮的方法，如有特殊需求可复写
 
 -\(void\)loadBackButtonsNeedShutDwonButton:\(BOOL\)needShutDown canGoBack:\(BOOL\)goBack;
-
-
 
