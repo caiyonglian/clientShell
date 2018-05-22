@@ -13,4 +13,6 @@
 * [2.2.1.6、相机拍照](22163001-xiang-ji-pai-zhao.md)
 * [2.2.1.7、二维码扫描](22173001-er-wei-ma-sao-miao.md)
 * [2.2.1.8、浏览器扩展功能](22183001-liu-lan-qi-kuo-zhan.md)
+* [2.2.2、极光推送](2223001-ji-guang-tui-song.md)
+* [2.2.3、百度统计](2233001-bai-du-tong-ji.md)
 
