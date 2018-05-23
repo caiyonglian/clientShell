@@ -15,4 +15,5 @@
 * [2.2.1.8、浏览器扩展功能](22183001-liu-lan-qi-kuo-zhan.md)
 * [2.2.2、极光推送](2223001-ji-guang-tui-song.md)
 * [2.2.3、百度统计](2233001-bai-du-tong-ji.md)
+* [2.2.4 配置管理类](212-pei-zhi-lei.md)
 
