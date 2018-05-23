@@ -1,6 +1,5 @@
 # **2.2.3、配置管理类**
 
-  
 配置管理类：BCConfigManage
 
 /\*\*
@@ -9,17 +8,17 @@
 
 **@return** \[NSBundle mainBundle\]
 
+使用示例:
+
+NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
+
 \*/
 
 -\(NSBundle\*\)getResourceBundle;
 
+
+
 /\*\*
-
-使用示例: 
-
-NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
-
-
 
 根据图片名称与图片类型从资源包中获取图片.
 
@@ -29,15 +28,17 @@ NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
 
 **@return** a image instance
 
+使用示例:
+
+\[\[BCConfigManage sharedConfigManager\]imageItemForName:@"imageName" ofType:@"png"\];
+
 \*/
 
 -\(UIImage\*\)imageItemForName:\(NSString\*\)imgName ofType:\(NSString\*\)imageType;
 
+
+
 /\*\*
-
-使用示例: 
-
-\[\[BCConfigManage sharedConfigManager\]imageItemForName:@"imageName" ofType:@"png"\];
 
 根据图片名称与图片类型及图片在资源包中的相对路径从资源包中获取图片.
 
@@ -49,15 +50,17 @@ NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
 
 **@return** a image instance
 
+使用示例:
+
+\[\[BCConfigManage sharedConfigManager\]imageItemForName:@"imageName" ofType:@"png"inDirectory:@"images"\];
+
 \*/
 
 -\(UIImage\*\)imageItemForName:\(NSString \*\)imgName ofType:\(NSString \*\)imageType inDirectory:\(NSString\*\)subPath;
 
+
+
 /\*\*
-
-使用示例: 
-
-\[\[BCConfigManage sharedConfigManager\]imageItemForName:@"imageName" ofType:@"png"inDirectory:@"images"\];
 
 配置文件中获取配置信息字典中的具体项的值
 
@@ -65,13 +68,15 @@ NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
 
 **@return** id instance
 
+使用示例:
+
+NSDictionary \*keyDic =\[\[BCConfigManage sharedConfigManager\]configInfoForKeyPath:@"BCKeyConfig"\];
+
 \*/
 
 -\(id\)configInfoForKeyPath:\(NSString\*\)keyPath;
 
-使用示例: 
 
-NSDictionary \*keyDic =\[\[BCConfigManage sharedConfigManager\]configInfoForKeyPath:@"BCKeyConfig"\];
 
 /\*\*
 
@@ -83,12 +88,14 @@ The Color must be in RGBA colore space. The range of color component is 0.0~1.0 
 
 **@return** UIColor a UIColor instance decoded from the configInfo
 
-\*/
-
--\(UIColor\*\)colorConfigInfoForKeyPath:\(NSString\*\)keyPath;  
 使用示例：
 
 UIColor\*naviBarTextColor = \[\[BCConfigManage sharedConfigManager\] colorConfigInfoForKeyPath:@"BCThemeConfig.NaviBar.TextColor"\];
+
+\*/
+
+-\(UIColor\*\)colorConfigInfoForKeyPath:\(NSString\*\)keyPath;  
+
 
 /\*\*
 
@@ -100,11 +107,13 @@ The string presentation for Font is in format "B14" or "b14". "B" and "b" stand 
 
 **@return** UIFont a UIFont instance decoded from the configInfo
 
+使用示例：
+
+UIFont\*naviBarTitleFont = \[\[BCConfigManage sharedConfigManager\] fontConfigInfoForKeyPath:@"BCThemeConfig.NaviBar.TextFont"\];
+
 \*/
 
 -\(UIFont\*\)fontConfigInfoForKeyPath:\(NSString\*\)keyPath;
 
-使用示例：
 
-UIFont\*naviBarTitleFont = \[\[BCConfigManage sharedConfigManager\] fontConfigInfoForKeyPath:@"BCThemeConfig.NaviBar.TextFont"\];
 
