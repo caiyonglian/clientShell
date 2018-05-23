@@ -12,7 +12,7 @@ this.errorHandler = error;
 
 var paramsList = \[flag\];
 
-varuri = 'mobile-service://?object=screen&command=screenShot&params='+ JSON.stringify\(paramsList\);
+var uri = 'mobile-service://?object=screen&command=screenShot&params='+ JSON.stringify\(paramsList\);
 
 callObject\(uri\);
 
