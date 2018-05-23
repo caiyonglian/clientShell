@@ -12,17 +12,31 @@ errorHandler: function \(error\) {
 
 },
 
-//flag默认传0
+ //截屏分享
+
+screenShoot:{
+
+successHandler: function \(successo\) {
+
+},
+
+errorHandler: function \(error\) {
+
+},
+
+//flag  android截屏分三种模式截屏，flag表示采用的方式  0 截取activity  1  截取view  2 截取webview     IOS只支持一种，activity,故默认传0
 
 screenShoot: function \(flag, success, error\) {
 
-this.successHandler = success;
+    this.successHandler = success;
 
-this.errorHandler = error;
+    this.errorHandler = error;
 
-var uri = 'mobile-service://?object=screen&command=screenShot&params=\['+flag+'\]';
+    var paramsList = \[flag\];
 
-callObject\(uri\);
+    var uri = 'mobile-service://?object=screen&command=screenShot&params='+ JSON.stringify\(paramsList\);
+
+    callObject\(uri\);
 
 }
 
