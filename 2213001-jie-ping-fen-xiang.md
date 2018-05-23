@@ -12,7 +12,7 @@ errorHandler: function \(error\) {
 
 },
 
-//flag android截屏分三种模式截屏，flag表示采用的方式 0 截取activity 1 截取view 2 截取webview  IOS只支持一种，activity,故默认传0 &params=' + JSON.stringify\(flag\) + '
+//flag android截屏分三种模式截屏，flag表示采用的方式 0 截取activity 1 截取view 2 截取webview  IOS只支持一种，activity,故默认传0
 
 screenShoot: function \(flag, success, error\) {
 
