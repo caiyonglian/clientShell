@@ -18,5 +18,4 @@
     * [配置管理类](212-pei-zhi-lei.md)
     * [Icon配置](iconpei-zhi.md)
     * [启动图片](qi-dong-tu.md)
-* [文件目录](wen-jian-mu-lu.md)
 
