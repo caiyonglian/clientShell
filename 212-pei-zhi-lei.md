@@ -1,4 +1,4 @@
-# **2.2.3、配置管理类**
+# **2.2.4、配置管理类**
 
 配置管理类：BCConfigManage
 
@@ -15,8 +15,6 @@ NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
 \*/
 
 -\(NSBundle\*\)getResourceBundle;
-
-
 
 /\*\*
 
@@ -35,8 +33,6 @@ NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
 \*/
 
 -\(UIImage\*\)imageItemForName:\(NSString\*\)imgName ofType:\(NSString\*\)imageType;
-
-
 
 /\*\*
 
@@ -58,8 +54,6 @@ NSBundle \*bundle = \[\[BCConfigManage sharedConfigManager\]getResourceBundle\];
 
 -\(UIImage\*\)imageItemForName:\(NSString \*\)imgName ofType:\(NSString \*\)imageType inDirectory:\(NSString\*\)subPath;
 
-
-
 /\*\*
 
 配置文件中获取配置信息字典中的具体项的值
@@ -75,8 +69,6 @@ NSDictionary \*keyDic =\[\[BCConfigManage sharedConfigManager\]configInfoForKeyP
 \*/
 
 -\(id\)configInfoForKeyPath:\(NSString\*\)keyPath;
-
-
 
 /\*\*
 
@@ -94,8 +86,7 @@ UIColor\*naviBarTextColor = \[\[BCConfigManage sharedConfigManager\] colorConfig
 
 \*/
 
--\(UIColor\*\)colorConfigInfoForKeyPath:\(NSString\*\)keyPath;  
-
+-\(UIColor\*\)colorConfigInfoForKeyPath:\(NSString\*\)keyPath;
 
 /\*\*
 
@@ -114,6 +105,4 @@ UIFont\*naviBarTitleFont = \[\[BCConfigManage sharedConfigManager\] fontConfigIn
 \*/
 
 -\(UIFont\*\)fontConfigInfoForKeyPath:\(NSString\*\)keyPath;
-
-
 
