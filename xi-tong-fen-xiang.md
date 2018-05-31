@@ -2,7 +2,7 @@
 
 **1、js方法：**
 
-//分享文本内容或链接
+//分享文本内容及链接
 
 systemShare:{
 
@@ -14,17 +14,15 @@ errorHandler: function \(error\) {
 
 },
 
-//contents,可以传输的内容 command=text contents内传输的是文本内容 command=link对应的链接
+ //contents,可以传输的内容 contents内传输的是文本内容与对应的链接格式为JSON.stringify\({'title':'abcdX','shareUrl':'http://www.baidu.com'}\)
 
-systemShare: function \(command,contents,success, error\) {
+systemShare: function \(contents,success, error\) {
 
 this.successHandler = success;
 
 this.errorHandler = error;
 
-var paramsList = \[contents\];
-
-var uri = 'mobile-service://?object=share&command='+command+'&params='+JSON.stringify\(paramsList\);
+varuri = 'mobile-service://?object=share&command=link&params='+contents;
 
  callObject\(uri\);
 
@@ -34,15 +32,9 @@ var uri = 'mobile-service://?object=share&command='+command+'&params='+JSON.stri
 
 **2、h5调用分享的方法**
 
-&lt;button onclick="boncAppEngine.systemShare.systemShare\('link','http://www.baidu.com',
+注：分享地址需要用urlencode进行编码。
 
- function\(info\){output.innerHTML= 'shareInfo: '+info.codeInfo;},
-
- function\(error\){output.innerHTML= 'shareError: '+error.description;}\)"&gt;systemShare&lt;/button&gt;
-
-
-
-&lt;buttononclick="boncAppEngine.systemShare.systemShare\('text','test content',
+&lt;button onclick="boncAppEngine.systemShare.systemShare\(JSON.stringify\({'title':'abcdX','shareUrl':'https%3a%2f%2fbaike.baidu.com%2fitem%2f%e6%b7%b1%e8%93%9d%e8%89%b2%e7%9a%84%e6%83%85%e4%b9%a6%2f10979182%3ffr%3daladdin'}\),
 
  function\(info\){output.innerHTML= 'shareInfo: '+info.codeInfo;},
 
