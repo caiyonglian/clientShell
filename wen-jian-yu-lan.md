@@ -6,9 +6,9 @@
 
 file:{
 
- //查看文件 fileObj中文件地址对应的key为fileUrl
+//查看文件 fileObj中文件地址对应的key为fileUrl
 
- //例：JSON.stringify\({'fileUrl':'http%3a%2f%2f172.16.63.108%3a8080%2fresources%2fdemo.docx.zip'}\)
+//例：JSON.stringify\({'fileUrl':'http%3a%2f%2f172.16.63.108%3a8080%2fresources%2fdemo.docx.zip'}\)
 
 successHandler:function\(success\){},
 
@@ -20,9 +20,9 @@ this.successHandler = success;
 
 this.errorHandler = error;
 
-varuri = 'mobile-service://?object=file&command=viewFile&params='+fileObj+'';
+var uri = 'mobile-service://?object=file&command=viewFile&params='+fileObj+'';
 
- callObject\(uri\);
+callObject\(uri\);
 
 }
 
