@@ -2,12 +2,6 @@
 
 **1、js方法：**
 
-p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo; color: \#008400; background-color: \#ffffff}  
-p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo; color: \#000000; background-color: \#ffffff}  
-p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo; color: \#272ad8; background-color: \#ffffff}  
-span.s1 {color: \#000000}  
-span.s2 {color: \#ba2da2}
-
 //应用信息
 
 appInfo: {
@@ -28,7 +22,7 @@ this.successHandler=success;
 
 this.errorHandler=error;
 
-varuri='mobile-service://?object=appInfo&command=getAppVersion';
+var uri='mobile-service://?object=appInfo&command=getAppVersion';
 
 callObject\(uri\);
 
@@ -40,15 +34,15 @@ callObject\(uri\);
 
 &lt;button onclick="boncAppEngine.appInfo.getAppVersion\(
 
- function \(appInfo\) {
+function \(appInfo\) {
 
- output.innerHTML='AppVersion:'+appInfo.versionNo;
+output.innerHTML='AppVersion:'+appInfo.versionNo;
 
- },
+},
 
- function \(error\){
+function \(error\){
 
- output.innerHTML= 'GetAppVersionError: '+error.description;
+output.innerHTML= 'GetAppVersionError: '+error.description;
 
- }\)"&gt;appVersion&lt;/button&gt;
+}\)"&gt;appVersion&lt;/button&gt;
 

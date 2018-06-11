@@ -14,9 +14,9 @@ errorHandler: function \(error\) {
 
 },
 
-//contents,可以传输的内容 contents内传输的是文本内容与对应的链接格式为command=link JSON.stringify\({'title':'abcdX','desc':'sssss','icon':'[http://','shareUrl':'http://www.baidu.com'}\](http://','shareUrl':'http://www.baidu.com'}\)\)
+//contents,可以传输的内容 contents内传输的是文本内容与对应的链接格式为command=link JSON.stringify\({'title':'abcdX','desc':'sssss','icon':'\[[http://','shareUrl':'http://www.baidu.com'}\]\(http://','shareUrl':'http://www.baidu.com'}\)\](http://','shareUrl':'http://www.baidu.com'}]%28http://','shareUrl':'http://www.baidu.com'}%29\)\)
 
-//command=image JSON.stringify\({'icon':'[http://'}\](http://'}\)\)
+//command=image JSON.stringify\({'icon':'\[[http://'}\]\(http://'}\)\](http://'}]%28http://'}%29\)\)
 
 systemShare: function \(command,contents,success, error\) {
 
@@ -24,7 +24,7 @@ this.successHandler = success;
 
 this.errorHandler = error;
 
-varuri = 'mobile-service://?object=share&command='+command+'&params='+contents;
+var uri = 'mobile-service://?object=share&command='+command+'&params='+contents;
 
 callObject\(uri\);
 
