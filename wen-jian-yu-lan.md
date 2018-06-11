@@ -4,39 +4,41 @@
 
 //文件
 
- file:{
+file:{
 
  //查看文件 fileObj中文件地址对应的key为fileUrl
 
- successHandler:function\(success\){},
+ //例：JSON.stringify\({'fileUrl':'http%3a%2f%2f172.16.63.108%3a8080%2fresources%2fdemo.docx.zip'}\)
 
- errorHandler:function\(error\){},
+successHandler:function\(success\){},
 
- viewFile: function\(fileObj,success,error\) {
+errorHandler:function\(error\){},
+
+viewFile: function\(fileObj,success,error\) {
 
 this.successHandler = success;
 
 this.errorHandler = error;
 
-var uri = 'mobile-service://?object=file&command=viewFile&params='+fileObj+'';
+varuri = 'mobile-service://?object=file&command=viewFile&params='+fileObj+'';
 
  callObject\(uri\);
 
- }
+}
 
- }
+}
 
 **2、H5的调用方法**
 
-&lt;button onclick="boncAppEngine.file.viewFile\('http://172.16.63.108:8080/resources/demo.docx.zip',
+&lt;button onclick="boncAppEngine.file.viewFile\(JSON.stringify\({'fileUrl':'http%3a%2f%2f172.16.63.108%3a8080%2fresources%2fdemo.docx.zip'}\),
 
- function\(success\){
+function\(success\){
 
- output.innerHTML= 'info: '+success.description;
+output.innerHTML= 'info: '+success.description;
 
- },function\(error\){
+},function\(error\){
 
- output.innerHTML = 'info: '+error.description;
+output.innerHTML = 'info: '+error.description;
 
- }\)"&gt;打开文件&lt;/button&gt;
+}\)"&gt;打开文件&lt;/button&gt;
 
