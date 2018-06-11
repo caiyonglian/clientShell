@@ -17,6 +17,7 @@
       * [关闭浏览器](guan-bi-liu-lan-qi.md)
       * [系统分享](xi-tong-fen-xiang.md)
       * [浏览器扩展功能](22183001-liu-lan-qi-kuo-zhan.md)
+      * [获取APP的版本号](huo-qu-app-de-ban-ben-hao.md)
     * [极光推送](2223001-ji-guang-tui-song.md)
     * [百度统计](2233001-bai-du-tong-ji.md)
     * [配置管理类](212-pei-zhi-lei.md)
